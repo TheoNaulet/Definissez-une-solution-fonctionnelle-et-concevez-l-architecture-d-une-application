@@ -1,0 +1,8 @@
+<h2>Bienvenue {{ userService.name }} ({{ userService.role }})</h2>
+
+<div *ngFor="let msg of messages" style="margin: 10px 0;">
+  <strong>{{ msg.from }}:</strong> {{ msg.text }}
+</div>
+
+<input [(ngModel)]="text" placeholder="Message" />
+<button (click)="send()">Envoyer</button>
